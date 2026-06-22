@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: dubai-cares-static-crypto
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: USDT_TON_ADDRESS
+        sync: false
+      - key: USDT_TRC20_ADDRESS
+        sync: false
+      - key: USDT_BEP20_ADDRESS
+        sync: false
+      - key: TON_ADDRESS
+        sync: false
+      - key: BTC_ADDRESS
+        sync: false

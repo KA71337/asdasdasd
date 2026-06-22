@@ -1,0 +1,13 @@
+{
+  "name": "dubai-cares-static-crypto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Dubai Cares mirror with env-backed crypto payment wallets.",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node scripts/build-static-routes.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

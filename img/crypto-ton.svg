@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>TON</title>
+  <circle cx="64" cy="64" r="64" fill="#0098EA"/>
+  <path fill="#fff" d="M36.9 38.7h54.2c5 0 8.2 5.4 5.7 9.8L69.5 96.2c-2.4 4.2-8.6 4.2-11 0L31.2 48.5c-2.5-4.4.7-9.8 5.7-9.8Zm21.6 49.2V49.4H39.4l19.1 38.5Zm11 0 19.1-38.5H69.5v38.5Z"/>
+</svg>

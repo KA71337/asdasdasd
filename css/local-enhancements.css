@@ -1,0 +1,394 @@
+html.local-transition-pending body {
+  opacity: 0;
+}
+
+html.local-transition-ready body,
+body {
+  opacity: 1;
+}
+
+html.local-transition-ready body,
+html.local-transition-leaving body {
+  transition: opacity 220ms ease;
+}
+
+html.local-transition-leaving body {
+  opacity: 0;
+}
+
+html.local-transition-leaving {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.local-transition-ready body,
+  html.local-transition-leaving body {
+    transition: none;
+  }
+}
+
+.donation--legacy-hidden {
+  display: none !important;
+}
+
+.crypto-donation {
+  padding: 24px 0 70px;
+}
+
+.crypto-donation *,
+.crypto-payment * {
+  box-sizing: border-box;
+}
+
+.crypto-donation__form {
+  width: 100%;
+}
+
+.crypto-donation__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 34px;
+  row-gap: 8px;
+}
+
+.crypto-donation__fields .form__input-group,
+.crypto-donation__methods {
+  margin-bottom: 28px;
+}
+
+.crypto-donation__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.crypto-option {
+  box-sizing: border-box !important;
+  display: block;
+  min-width: 0;
+  width: 100%;
+}
+
+.crypto-option * {
+  box-sizing: border-box !important;
+}
+
+.crypto-option label {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box !important;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  height: 88px;
+  justify-content: flex-start;
+  line-height: 1.25;
+  max-width: 100%;
+  min-width: 0;
+  padding: 16px 14px;
+  position: relative;
+  text-align: left;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease;
+  width: 100% !important;
+}
+
+.crypto-option label::before,
+.crypto-option label::after {
+  content: none !important;
+  display: none !important;
+}
+
+.crypto-option label:hover,
+.crypto-option.checked label {
+  border-color: #69425B;
+  box-shadow: 0 12px 26px rgba(105, 66, 91, 0.12);
+  transform: translateY(-1px);
+}
+
+.crypto-option.checked label {
+  background-color: rgba(105, 66, 91, 0.05);
+}
+
+.crypto-option input {
+  appearance: none;
+  height: 1px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.crypto-option__icons,
+.crypto-payment__icon-wrap {
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.crypto-option__icon,
+.crypto-payment__icon {
+  display: block;
+  height: 42px;
+  object-fit: contain;
+  width: 42px;
+}
+
+.crypto-option__badge,
+.crypto-payment__badge {
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  bottom: -4px;
+  display: block;
+  height: 20px;
+  object-fit: contain;
+  position: absolute;
+  right: -5px;
+  width: 20px;
+}
+
+.crypto-option__badge[src=""],
+.crypto-payment__badge[src=""] {
+  display: none;
+}
+
+.crypto-option em {
+  color: #69425B;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  font-family: "Nexa", arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  min-width: 0;
+  text-transform: uppercase;
+}
+
+.crypto-option em span {
+  color: #666;
+  font-family: "TrebuchetMS", arial;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.crypto-donation__action {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.crypto-donation__action .button,
+.crypto-payment__action .button {
+  min-width: 220px;
+}
+
+.crypto-payment {
+  padding-bottom: 76px;
+}
+
+.crypto-payment__panel {
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 34px;
+}
+
+.crypto-payment__header,
+.crypto-payment__timer-head,
+.crypto-payment__row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.crypto-payment__header {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 24px;
+}
+
+.crypto-payment__coin {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  min-width: 0;
+}
+
+.crypto-payment__label,
+.crypto-payment__row span,
+.crypto-payment__timer-head span {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.crypto-payment__coin .h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+.crypto-payment__status {
+  border: 1px solid #DDD0D7;
+  border-radius: 6px;
+  color: #69425B;
+  flex: 0 0 auto;
+  font-family: "Nexa", arial;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 10px 14px;
+  text-transform: uppercase;
+}
+
+.crypto-payment.is-expired .crypto-payment__status {
+  border-color: #B42E34;
+  color: #B42E34;
+}
+
+.crypto-payment__summary {
+  display: grid;
+  gap: 18px;
+  padding: 30px 0;
+}
+
+.crypto-payment__row {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 18px;
+}
+
+.crypto-payment__row strong {
+  color: #29282a;
+  font-family: "Nexa", arial;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+  min-width: 0;
+  text-align: right;
+}
+
+.crypto-payment__address {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.crypto-payment__timer {
+  margin-top: 4px;
+}
+
+.crypto-payment__timer-head strong {
+  color: #69425B;
+  font-family: "Nexa", arial;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.crypto-payment.is-expired .crypto-payment__timer-head strong {
+  color: #B42E34;
+}
+
+.crypto-payment__progress {
+  background: #e4e4e4;
+  border-radius: 999px;
+  height: 8px;
+  margin-top: 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.crypto-payment__progress span {
+  background: #69425B;
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  transition: width 400ms linear;
+  width: 100%;
+}
+
+.crypto-payment.is-expired .crypto-payment__progress span {
+  background: #B42E34;
+}
+
+.crypto-payment__action {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.crypto-payment.is-expired .crypto-payment__action .button {
+  cursor: default;
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 1100px) {
+  .crypto-donation__grid {
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .crypto-donation {
+    padding: 12px 0 46px;
+  }
+
+  .crypto-donation__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .crypto-donation__grid {
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  }
+
+  .crypto-option label {
+    height: 78px;
+    padding: 12px;
+  }
+
+  .crypto-payment {
+    padding-bottom: 52px;
+  }
+
+  .crypto-payment__panel {
+    padding: 22px 18px;
+  }
+
+  .crypto-payment__header,
+  .crypto-payment__row,
+  .crypto-payment__timer-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .crypto-payment__row strong {
+    text-align: left;
+  }
+
+  .crypto-payment__status {
+    width: 100%;
+  }
+
+  .crypto-donation__action .button,
+  .crypto-payment__action .button {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .crypto-donation__grid {
+    grid-template-columns: 1fr;
+  }
+}
